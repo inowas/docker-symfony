@@ -15,9 +15,10 @@ RUN buildDeps="libpq-dev libzip-dev libicu-dev" && \
         intl
 
 RUN apt-get update && apt-get install -y \
-    git \
-    unzip \
-    phpunit
+    	git \
+    	unzip \
+    	phpunit \
+	sudo
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -33,4 +34,4 @@ RUN echo 'alias sf3="php bin/console"' >> ~/.bashrc
 RUN mkdir -p /fixtures
 COPY . /fixtures
 
-WORKDIR /var/www/symfony
+WORKDIR /var/www/inowas

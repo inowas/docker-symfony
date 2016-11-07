@@ -19,7 +19,7 @@ services:
         links:
             - postgres:postgres
         volumes:
-            - ${SYMFONY_APP_PATH}:/var/www/symfony
+            - ${SYMFONY_APP_PATH}:/var/www/inowas
             - ./logs/symfony:/var/www/symfony/app/logs
         environment:
             MEMORY_LIMIT: 256
