@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     phpunit \
     --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
-RUN buildDeps="ibfreetype6-dev libjpeg-dev libmcrypt-dev libpq-dev libpng12-dev zlib1g-dev libzip-dev libicu-dev" && \
+RUN buildDeps="libfreetype6-dev libjpeg-dev libmcrypt-dev libpq-dev libpng12-dev zlib1g-dev libzip-dev libicu-dev" && \
     apt-get update && \
     apt-get install -y $buildDeps --no-install-recommends && \
     rm -rf /var/lib/apt/lists/* && \
